@@ -103,7 +103,7 @@ class AllProductsSection extends Component {
 
     const options = {
       headers: {
-        Authorization: `Bearer${jwtToken}`,
+        Authorization: `Bearer ${jwtToken}`,
       },
       method: 'GET',
     }
@@ -212,7 +212,7 @@ class AllProductsSection extends Component {
     )
   }
 
-  changeRatings = activeRatingId => {
+  changeRating = activeRatingId => {
     this.setState({activeRatingId}, this.getProducts)
   }
 
@@ -238,6 +238,7 @@ class AllProductsSection extends Component {
           categoryOptions={categoryOptions}
           ratingsList={ratingsList}
           changeSearchInput={this.changeSearchInput}
+          enterSearchInput={this.enterSearchInput}
           activeCategoryId={activeCategoryId}
           activeRatingId={activeRatingId}
           changeCategory={this.changeCategory}
